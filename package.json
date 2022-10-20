@@ -1,0 +1,21 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "pakage.json file",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "rm -r ./cypress/reports/*.json",
+    "test": "npx  cypress run",
+    "mergejson":"mochawesome-merge reports\\*.json > sasi.json",
+    "runtests": "npm run test"
+  },
+  "author": "Vishnu Vijayan",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.8.0"
+  },
+  "dependencies": {
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}

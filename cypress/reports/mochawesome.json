@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-10-20T11:11:53.948Z",
+    "end": "2022-10-20T11:12:01.196Z",
+    "duration": 7248,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "636a1d7a-0685-478c-9caf-a4522048fb1c",
+      "title": "",
+      "fullFile": "cypress/e2e/2-advanced-examples/firsttest.cy.js",
+      "file": "cypress/e2e/2-advanced-examples/firsttest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4de96c41-7a80-4808-8311-010c6b6743f5",
+          "title": "All Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test1",
+              "fullTitle": "All Tests test1",
+              "timedOut": null,
+              "duration": 1307,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "expect(true).to.equal(true);\ncy.visit('https://www.toolsqa.com/selenium-training/');\ncy.title().should('eq', 'Tools QA - Selenium Training');\ncy.get(\"a[href='#enroll-form']:nth-child(2)\").should('be.visible').click();\ncy.get(\"input[name='firstName']\").should('be.visible').should('be.enabled').type(\"secret_sauce\");\ncy.get(\"input[name='lastName']\").should('be.visible').should('be.enabled').type(\"secret_sauch\");\ncy.get(\"input#email\").should('be.visible').should('be.enabled').type(\"sasi@soman.com\");\ncy.get(\"input#mobile\").should('be.visible').should('be.enabled').type(\"9998889998\");\ncy.get(\"select#country\").should('be.visible').should('be.enabled').select(\"Albania\");\ncy.get(\"input#city\").should('be.visible').should('be.enabled').type(\"tokyo\");\ncy.get(\"textarea#message\").should('be.visible').should('be.enabled').type(\"punnaara\");\ncy.get(\"#enroll-form > button\").should('be.visible').should('be.enabled').click();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed because you are attempting to visit a URL that is of a different origin.\n\nIn order to visit a different origin, you can enable the `experimentalSessionAndOrigin` flag and use `cy.origin()`:\n\n`cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')`\n`<commands targeting https://opensource-demo.orangehrmlive.com go here>`\n\n`cy.origin('https://toolsqa.com', () => {`\n`  cy.visit('https://www.toolsqa.com/selenium-training/')`\n`  <commands targeting https://www.toolsqa.com go here>`\n`})`\n\nThe new URL is considered a different origin because the following parts of the URL are different:\n\n  > superdomain\n\nYou may only `cy.visit()` same-origin URLs within a single test.\n\nThe previous URL you visited was:\n\n  > 'https://opensource-demo.orangehrmlive.com'\n\nYou're attempting to visit this URL:\n\n  > 'https://www.toolsqa.com'\n\nhttps://on.cypress.io/cannot-visit-different-origin-domain",
+                "estack": "CypressError: `cy.visit()` failed because you are attempting to visit a URL that is of a different origin.\n\nIn order to visit a different origin, you can enable the `experimentalSessionAndOrigin` flag and use `cy.origin()`:\n\n`cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')`\n`<commands targeting https://opensource-demo.orangehrmlive.com go here>`\n\n`cy.origin('https://toolsqa.com', () => {`\n`  cy.visit('https://www.toolsqa.com/selenium-training/')`\n`  <commands targeting https://www.toolsqa.com go here>`\n`})`\n\nThe new URL is considered a different origin because the following parts of the URL are different:\n\n  > superdomain\n\nYou may only `cy.visit()` same-origin URLs within a single test.\n\nThe previous URL you visited was:\n\n  > 'https://opensource-demo.orangehrmlive.com'\n\nYou're attempting to visit this URL:\n\n  > 'https://www.toolsqa.com'\n\nhttps://on.cypress.io/cannot-visit-different-origin-domain\n    at cannotVisitDifferentOrigin (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:141015:72)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:142035:20)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:9435:18)\n    at _drainQueueStep (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/2-advanced-examples/firsttest.cy.js:13:4)",
+                "diff": null
+              },
+              "uuid": "44f1c7a7-ba99-4b20-a2d1-7ae3d588e0c0",
+              "parentUUID": "4de96c41-7a80-4808-8311-010c6b6743f5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test2",
+              "fullTitle": "All Tests test2",
+              "timedOut": null,
+              "duration": 2303,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "lo.enterUsername('Admin');\nlo.enterPassword('admin123');\nlo.clickLogin();",
+              "err": {},
+              "uuid": "37a966e9-d31b-41d6-859b-abe9b33ef69a",
+              "parentUUID": "4de96c41-7a80-4808-8311-010c6b6743f5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test3",
+              "fullTitle": "All Tests test3",
+              "timedOut": null,
+              "duration": 2436,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"input[name='username']\").type('Admin');\ncy.get(\"input[name='password']\").type('admin123');\ncy.get(\"button[type='submit']\").click();",
+              "err": {},
+              "uuid": "1748c93b-1e4a-4a5c-8464-47d84045a347",
+              "parentUUID": "4de96c41-7a80-4808-8311-010c6b6743f5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "37a966e9-d31b-41d6-859b-abe9b33ef69a",
+            "1748c93b-1e4a-4a5c-8464-47d84045a347"
+          ],
+          "failures": [
+            "44f1c7a7-ba99-4b20-a2d1-7ae3d588e0c0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6046,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
